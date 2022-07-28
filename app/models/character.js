@@ -59,10 +59,10 @@ const characterSchema = new Schema(
 
 // virtuals go here
 // these are virtual properties, that use existing data(saved in the database), to add a property whenever we retieve a document and convert it to JSON or an object.
-petSchema.virtual('fullTitle').get(function () {
+petSchema.virtual('fullStats').get(function () {
     // in here, we can do whatever javascripty things we want, to make sure we return some value that will be assigned to this virtual
     // fullTitle is going to combine the name and type to build a title
-    return `${this.name} the ${this.type}`
+    return `${this.name} is ${this.height} cm and ${this.weight} kg.`
 })
 
 
