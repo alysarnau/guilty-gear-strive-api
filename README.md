@@ -141,16 +141,13 @@ Response:
 HTTP/1.1 204 No Content
 ```
 
-## Characters Routes
 
 ### Characters Route Table
 
-
-### Authentication
-
-| Verb   | URI Pattern            | Controller#Action |
-|--------|------------------------|-------------------|
-| POST   | `/sign-up`             | `users#signup`    |
-| POST   | `/sign-in`             | `users#signin`    |
-| PATCH  | `/change-password/`    | `users#changepw`  |
-| DELETE | `/sign-out/`           | `users#signout`   |
+| Verb   | URI Pattern            | Controller#Action      |
+|--------|------------------------|------------------------|
+| POST   | `/characters`          | `characters#create`    |
+| GET    | `/characters`          | `characters#index`     |
+| GET    | `/characters/:id`      | `characters#show`      |
+| PATCH  | `/characters/:id`      | `characters#update`    |
+| DELETE | `/characters/:id`      | `characters#delete`    |
