@@ -1,18 +1,21 @@
 // {
 //     "character": 
     // [
+    // {
+    //     "character": {
     //     {
-    //         name: "Ky Kiske",
-    //         race: ,
-    //         age: ,
-    //         gender: ,
-    //         origin: ,
-    //         eyeColor: ,
-    //         bloodType: ,
-    //         height: ,
-    //         weight:,
-    //         isADandy: false
-    //     },
+    //         "name": "Sol Badguy",
+    //         "race": "Gear",
+    //         "gender": "male",
+    //         "origin": "USA",
+    //         "eyeColor": "brown",
+    //         "bloodType": "Unanalyzable",
+    //         "height": 184,
+    //         "weight": 74,
+    //         "isADandy": false
+    //     }
+    //     }
+    // }
     // ]
 // }
 
