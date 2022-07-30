@@ -61,7 +61,7 @@ router.get('/characters/:id', (req, res, next) => {
 
 // CREATE
 // POST /characters
-router.post('/characters', requireToken, (req, res, next) => {
+router.post('/characters', (req, res, next) => {
 	// set owner of new pet to be current user
 	req.body.character.owner = req.user.id
 
