@@ -63,7 +63,7 @@ router.get('/characters/:id', (req, res, next) => {
 // POST /characters
 router.post('/characters', (req, res, next) => {
 	// set owner of new pet to be current user
-	req.body.character.owner = req.user.id
+	// req.body.character.owner = req.user.id
 
 	Character.create(req.body.character)
 		// respond to succesful `create` with status 201 and JSON of new "pet"

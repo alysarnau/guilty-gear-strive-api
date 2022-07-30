@@ -44,10 +44,10 @@ const characterSchema = new Schema(
 			default: false,
 		},
         //moves: [moveSchema],
-        owner: {
-			type: Schema.Types.ObjectId,
-			ref: 'User'
-		}
+        // owner: {
+		// 	type: Schema.Types.ObjectId,
+		// 	ref: 'User'
+		// }
     }
 	, {
         timestamps: true,
