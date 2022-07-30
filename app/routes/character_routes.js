@@ -62,7 +62,7 @@ router.get('/characters/:id', (req, res, next) => {
 // CREATE
 // POST /characters
 router.post('/characters', (req, res, next) => {
-	// set owner of new pet to be current user
+	// set owner of new Character to be current user
 	// req.body.character.owner = req.user.id
 
 	Character.create(req.body.character)
@@ -78,7 +78,7 @@ router.post('/characters', (req, res, next) => {
 
 // UPDATE
 // PATCH /characters/5a7db6c74d55bc51bdf39793
-router.patch('/characters/:id', requireToken, removeBlanks, (req, res, next) => {
+router.patch('/characters/:id', removeBlanks, (req, res, next) => {
 	// if the client attempts to change the `owner` property by including a new
 	// owner, prevent that by deleting that key/value pair
 	delete req.body.character.owner
@@ -101,7 +101,7 @@ router.patch('/characters/:id', requireToken, removeBlanks, (req, res, next) => 
 
 // DESTROY
 // DELETE /pets/5a7db6c74d55bc51bdf39793
-router.delete('/characters/:id', requireToken, (req, res, next) => {
+router.delete('/characters/:id', (req, res, next) => {
 	Character.findById(req.params.id)
 		.then(handle404)
 		.then((character) => {
