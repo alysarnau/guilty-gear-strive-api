@@ -105,8 +105,6 @@ router.delete('/characters/:id', (req, res, next) => {
 		.then(handle404)
 		.then((character) => {
 			// throw an error if current user doesn't own `character`
-			requireOwnership(req, character)
-			// delete the pet ONLY IF the above didn't throw
 			character.deleteOne()
 		})
 		// send back 204 and no content if the deletion succeeded
