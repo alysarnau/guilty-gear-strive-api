@@ -88,8 +88,6 @@ router.patch('/characters/:id', removeBlanks, (req, res, next) => {
 		.then((character) => {
 			// pass the `req` object and the Mongoose record to `requireOwnership`
 			// it will throw an error if the current user isn't the owner
-			requireOwnership(req, character)
-
 			// pass the result of Mongoose's `.update` to the next `.then`
 			return character.updateOne(req.body.character)
 		})
@@ -100,9 +98,10 @@ router.patch('/characters/:id', removeBlanks, (req, res, next) => {
 })
 
 // DESTROY
-// DELETE /pets/5a7db6c74d55bc51bdf39793
+// DELETE /characters/5a7db6c74d55bc51bdf39793
 router.delete('/characters/:id', (req, res, next) => {
 	Character.findById(req.params.id)
+		.then(console.log(req.params.id))
 		.then(handle404)
 		.then((character) => {
 			// throw an error if current user doesn't own `character`
